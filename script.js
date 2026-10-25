@@ -14,7 +14,7 @@ const cases=[
  ['Concept · Neighbourhood cafe','Local social engagement','Turn nearby regulars into a loud community.','Behind-the-bar Reels, location tagging, and monthly community prompts.','from-[#ff7a59] to-[#ffd36e]','Your daily pour.'],
  ['Concept · B2B SaaS startup','LinkedIn content & lead generation','Earn trust and qualified conversations.','Founder-led posts, carousel explainers and a lead-magnet funnel.','from-[#0f172a] to-[#6d28ff]','Ship smarter.']];
 const tiles=[['Post','bg-vio text-white','col-span-2 row-span-2','Say it louder.'],['Reel cover','bg-lime text-[#0c0c10]','row-span-2','Watch this.'],['Carousel','bg-card border border-line','','Swipe 1/5'],['Ad concept','bg-ink text-bg','','Shop now'],['Campaign','bg-[#ff7a59] text-white','col-span-2','Launch week'],['Story','bg-[#e7e0ff] text-[#2a0a7a]','','Poll time']];
-const quotes=['“Replace with a real client quote about working with VYBE DIGITAL.”','“Add a second approved testimonial here, with name and company.”','“Add a third approved testimonial here, with permission.”'];
+const quotes=['“Replace with a real client quote about working with CQC MARKETING.”','“Add a second approved testimonial here, with name and company.”','“Add a third approved testimonial here, with permission.”'];
 const faqs=[
  ['What services do you offer?','Strategy, content and Reels, account management, paid social, influencer campaigns, and analytics. You can start with one or combine several.'],
  ['How much does it cost?','Pricing depends on scope, platforms and content volume. Share your budget in the form and we’ll recommend a plan that fits.'],
@@ -38,7 +38,6 @@ addEventListener('keydown',e=>{if(e.key==='Escape')tog(false)});
 
 // static
 $('#ticker').innerHTML=Array(4).fill('<span>CREATIVE THINKING.</span><span class="text-lime">STRATEGIC EXECUTION.</span><span>MEASURABLE GROWTH.</span>').join('');
-$('#logos').innerHTML=Array.from({length:5},(_,i)=>`<div class="border border-dashed border-line rounded-xl h-16 grid place-items-center text-sm text-mute font-semibold">Client logo ${i+1}</div>`).join('');
 $('#serviceGrid').innerHTML=services.map((s,i)=>`<article class="rv group rounded-3xl p-7 min-h-[260px] flex flex-col justify-between transition hover:-translate-y-1 ${s[3]} ${i%2?'lg:mt-8':''}">
  <span class="w-14 h-14 rounded-2xl bg-white/20 border border-current/20 grid place-items-center group-hover:rotate-6 transition"><i data-lucide="${s[0]}"></i></span>
  <div><h3 class="text-2xl font-extrabold tracking-tight">${s[1]}</h3><p class="mt-2 opacity-80">${s[2]}</p></div></article>`).join('');
@@ -64,7 +63,7 @@ document.querySelectorAll('#faqList button').forEach(b=>b.onclick=()=>{const o=b
 $('#fNav').innerHTML=nav.map(n=>li(n[1],n[0],'hover:text-lime')).join('');
 $('#fServ').innerHTML=services.map(s=>li('#services',s[1],'hover:text-lime')).join('');
 // EDIT: replace with your real profile URLs
-$('#socials').innerHTML=[['instagram','https://www.instagram.com/'],['linkedin','https://www.linkedin.com/'],['youtube','https://www.youtube.com/']].map(s=>`<a href="${s[1]}" target="_blank" rel="noopener" aria-label="${s[0]}" class="w-10 h-10 grid place-items-center rounded-full border border-white/30 hover:bg-lime hover:text-[#0c0c10]"><i data-lucide="${s[0]}" class="w-4 h-4"></i></a>`).join('');
+$('#socials').innerHTML=[['instagram','https://www.instagram.com/cqc_medias/?utm_source=ig_web_button_share_sheet'],['linkedin','https://www.linkedin.com/']].map(s=>`<a href="${s[1]}" target="_blank" rel="noopener" aria-label="${s[0]}" class="w-10 h-10 grid place-items-center rounded-full border border-white/30 hover:bg-lime hover:text-[#0c0c10]"><i data-lucide="${s[0]}" class="w-4 h-4"></i></a>`).join('');
 $('#yr').textContent=new Date().getFullYear();
 privBtn.onclick=()=>priv.showModal();
 
